@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.red, // (2)
+        // fontFamily: 'HachiMaruPop',  // (7)
       ),
       home: const HomeScreen(),
     );

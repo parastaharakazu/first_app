@@ -25,10 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('First App (Updated)'), // (1)
+        leading: Icon(Icons.edit), // (15)
       ),
       body: Container(
         // (10)
         width: double.infinity, // (10)
+        decoration: BoxDecoration(color: Colors.yellow), // (17)
         child: Column(
           // (9)
           children: [
@@ -47,7 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             TextField(
               controller: inputTextController,
+              style: TextStyle(fontSize: 30), // (16)
+              decoration: InputDecoration(hintText: '文字列を入力してください'), // (16)
             ), // (12)
+            SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 // (14)
@@ -55,6 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Text('ボタン'), // (9)
             ),
+            SizedBox(height: 30),
+            Container(
+              width: 300,
+              child: Image.asset('assets/images/flutter-logo.png'),
+            ), // (18)
           ],
         ),
       ),
